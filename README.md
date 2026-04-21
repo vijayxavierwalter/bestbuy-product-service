@@ -4,7 +4,7 @@ This is a Rust app that simulates a product catalog. It is meant to be used in c
 
 This app is a simple REST API that allows you to get a list of products, get a single product, update a product, and add a product.
 
-Products are loaded into memory and not persisted. So if the app is restarted, the products will be reloaded.
+Products are loaded into memory and not persisted. So if the app is restarted, products will be reloaded.
 
 ## Running the app locally
 
