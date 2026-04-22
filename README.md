@@ -1,35 +1,28 @@
-# product-service
+# Best Buy Product Service
 
-This is a Rust app that simulates a product catalog. It is meant to be used in conjunction with the store-front and store-admin apps.
+This service provides the product catalog API for the Best Buy Cloud-Native Application.
 
-This app is a simple REST API that allows you to get a list of products, get a single product, update a product, and add a product.
+## Responsibilities
+- Return a list of products
+- Return a single product by ID
+- Add new products
+- Update existing products
+- Support product management for the store-admin app
+- Provide product data to the store-front app
 
-Products are loaded into memory and not persisted. So if the app is restarted, products will be reloaded.
+## Tech Stack
+- Rust
+- Docker
 
-## Running the app locally
+## Related Services
+- store-front
+- store-admin
+- order-service
+- makeline-service
 
-The app does not rely on any other services, so you can run it locally without any other services running.
+## Notes
+This service is currently based on the Lab 8 starter and is being adapted for the Best Buy final project.
 
-### Prerequisites
-
-- [Rust](https://www.rust-lang.org/tools/install)
-
-### Running the app
-
-To run the app, clone the repo, open a terminal, and navigate to the `product-service` directory. Then run the following command:
-
+## Local Run
 ```bash
 cargo run
-```
-
-When the app is running, you should see output similar to the following:
-
-```text
-    Finished dev [unoptimized + debuginfo] target(s) in 0.16s
-     Running `target/debug/product-service`
-Listening on http://0.0.0.0:3002
-[2023-06-28T02:44:47Z INFO  actix_server::builder] starting 16 workers
-[2023-06-28T02:44:47Z INFO  actix_server::server] Actix runtime found; starting in Actix runtime
-```
-
-Using the [`test-product-service.http`](./test-product-service.http) file in the root of the repo, you can test the API. However, you will need to use VS Code and have the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension installed.
