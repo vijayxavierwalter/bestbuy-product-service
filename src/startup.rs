@@ -9,7 +9,7 @@ use crate::routes::*;
 use crate::model::Product;
 use crate::data::fetch_products;
 
-pub fn run(settings: Settings) -> Result<Server, std::io::Error> {
+pub fn run(mut settings: Settings) -> Result<Server, std::io::Error> {
     let products = fetch_products(&settings);
 
     let listener = settings.get_tcp_listener()?;
